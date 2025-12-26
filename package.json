@@ -1,13 +1,16 @@
 {
   "name": "@ony-boom/cd",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV='development' bun run --watch src/index.ts"
+    "dev": "NODE_ENV='development' bun run --watch src/index.ts",
+    "postinstall": "bun2nix -o bun.nix"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "bun2nix": "^2.0.6",
     "prettier": "^3.7.4"
   },
   "peerDependencies": {

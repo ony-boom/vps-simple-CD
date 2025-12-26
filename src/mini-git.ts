@@ -18,11 +18,11 @@ class MiniGit {
     return $`git add .
     git commit -m "${commitName}"
     git push
-    `;
+    `.cwd(this.baseDir);
   }
 
   async pull() {
-    return $`git pull`;
+    return $`git pull`.cwd(this.baseDir);
   }
 }
 
