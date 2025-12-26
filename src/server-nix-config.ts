@@ -35,7 +35,7 @@ class ServerNixConfig {
   }
 
   async deployLocal() {
-    return $`${this.deployBaseArgs} apply-local`.cwd(this.configPath);
+    return $`sudo ${this.deployBaseArgs} apply-local`.cwd(this.configPath);
   }
 
   async updateInput(input: string, revision: string) {
